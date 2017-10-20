@@ -9,6 +9,8 @@ gem 'rails', '~> 5.0.6'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
 
+gem 'pry-rails', group: [:development, :test]
+gem 'rubocop', require: false
 
 group :development, :test do
   gem 'byebug', platform: :mri
