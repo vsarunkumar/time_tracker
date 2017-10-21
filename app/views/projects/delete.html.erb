@@ -1,0 +1,9 @@
+<%= link_to('<< Back to List', { action: 'index' }) %>
+<div>
+  <h2>Delete Project</h2>
+  <%= form_for(:project, :url => { action: 'destroy', id: @project.id}) %>
+    <p>Are you sure want to permanently delete this Project?</p>
+
+    <%= submit_tag('Delete Subject')%>
+  <% end %>
+</div>
