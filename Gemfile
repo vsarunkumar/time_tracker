@@ -17,6 +17,8 @@ gem 'pry-rails', group: %i[development test]
 gem 'rubocop', require: false
 
 gem 'devise'
+gem 'bootswatch-rails'
+gem 'bootstrap-sass'
 
 group :development, :test do
   gem 'byebug', platform: :mri
