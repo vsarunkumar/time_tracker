@@ -1,0 +1,25 @@
+<h2>Tasks</h2>
+
+<%= link_to('Add new Task', { action: 'new' }) %>
+
+<table>
+  <tr>
+    <th>&nbsp;</th>
+    <th>Task</th>
+    <th>Project</th>
+    <th>Hours</th>
+  </tr>
+  <% @tasks.each do |task| %>
+    <tr>
+      <td><%= task.id %></td>
+      <td><%= task.name %></td>
+      <td><%= task.project_id %></td>
+      <td><%= task.hour %></td>
+      <td>
+        <%= link_to('Show', { action: 'show', id: task.id }) %>
+        <%= link_to('Edit', { action: 'edit', id: task.id }) %>
+        <%= link_to('Destroy', task, method: :delete, data: { confirm: 'Are you sure?' }) %>
+      </td>
+    </tr>
+  <% end %>
+</table>
