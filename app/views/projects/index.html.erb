@@ -2,22 +2,24 @@
 
 <%= link_to('Add new Project', { action: 'new' }) %>
 
-<table>
-  <tr>
-    <th>&nbsp;</th>
-    <th>Project</th>
-    <th>Details</th>
-  </tr>
-  <% @projects.each do |project| %>
+<table class="table table-striped table-hover">
+  <thead>
     <tr>
-      <td><%= project.id %></td>
-      <td><%= project.name %></td>
-      <td><%= project.details %></td>
-      <td>
-        <%= link_to('Show', { action: 'show', id: project.id }) %>
-        <%= link_to('Edit', { action: 'edit', id: project.id }) %>
-        <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </td>
+      <th>&nbsp;</th>
+      <th>Project</th>
+      <th>Details</th>
     </tr>
-  <% end %>
+  </thead>
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.id %></td>
+        <td><%= project.name %></td>
+        <td><%= project.details %></td>
+        <td><%= link_to('Show', { action: 'show', id: project.id }) %></td>
+        <td><%= link_to('Edit', { action: 'edit', id: project.id }) %></td>
+        <td><%= link_to('Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }) %></td>
+      </tr>
+    <% end %>
+  <tbody>
 </table>
