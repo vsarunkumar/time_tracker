@@ -4,5 +4,10 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :projects
-  resources :tasks
+
+  resources :tasks do
+    collection do
+      get 'get_project_wise'
+    end
+  end
 end
