@@ -22,6 +22,9 @@ gem 'devise'
 
 gem 'rails_admin'
 
+gem 'acts_as_xlsx'
+gem 'axlsx_rails'
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end
