@@ -16,9 +16,11 @@ gem 'turbolinks'
 gem 'pry-rails', group: %i[development test]
 gem 'rubocop', require: false
 
-gem 'devise'
-gem 'bootswatch-rails'
 gem 'bootstrap-sass'
+gem 'bootswatch-rails'
+gem 'devise'
+
+gem 'rails_admin'
 
 group :development, :test do
   gem 'byebug', platform: :mri
