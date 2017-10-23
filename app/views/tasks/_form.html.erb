@@ -1,21 +1,32 @@
 <div class="container">
-<%= form_for(task) do |f| %>
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :project_id %>
-    <%= f.collection_select(:project_id, projects, :id, :name) %>
-  </div>
-  <div class="field">
-    <%= f.label :hour %>
-    <%= f.text_field :hour %>
-  </div>
+  <div class='row'> 
+    <div class='col-md-6 col-md-offset-3'>
+      <%= form_for(task, :class => 'form-horizontal') do |f| %>
+        <div class="form-group">
+          <%= f.label :name, :class => 'col-lg-2 control-label' %>
+          <div class="col-lg-10">
+            <%= f.text_field :name, :class => 'form-control' %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :hour, :class => 'col-lg-2 control-label' %>
+          <div class="col-lg-10">
+            <%= f.text_field :hour, :class => 'form-control' %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :project_id, :class => 'col-lg-2 control-label' %>
+          <div class="col-lg-10">
+            <%= f.collection_select(:project_id, projects, :id, :name, {}, {:class => 'form-control'}) %>
+          </div>
+        </div>
 
-  <div class="actions">
-    <%= f.submit %>
+        <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-2">
+            <%= f.submit :class => 'btn btn-primary' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
-<% end %>
-
 </div>

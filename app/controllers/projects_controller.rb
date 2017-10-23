@@ -43,9 +43,21 @@ class ProjectsController < ApplicationController
     redirect_to(action: 'index')
   end
 
+  def excel_sheet
+    @tasks = project_service.get_project_tasks(current_user, params[:id])
+    respond_to do |format|
+      format.html
+      format.xlsx
+    end
+  end
+
   private
 
   def project_params
     params.require(:project).permit(:name, :details)
+  end
+
+  def project_service
+    @project_service ||= ProjectService.new
   end
 end

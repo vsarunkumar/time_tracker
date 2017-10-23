@@ -1,5 +1,17 @@
 <div class='row'>
-  <div class='col-sm-4 col-sm-offset-4'>
+  <div class='col-sm-4 '>
+    <div class='row'>
+      <h3>Admin</h3> 
+      <h5>email : admin@test.com</h5>
+      <h5>password : password</h5>
+    </div>
+    <div class='row'>
+      <h3>User</h3> 
+      <h5>email : user1@test.com</h5>
+      <h5>password : password</h5>
+    </div>
+  </div>
+  <div class='col-sm-4'>
     <div class='col-sm-offset-4'><h2>Log in</h2></div>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), :class => 'navbar-form navbar-left') do |f| %>

@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   root 'home#index'
   devise_for :users
 
-  resources :projects
+  resources :projects do
+    collection do
+      get 'excel_sheet'
+    end
+  end
 
   resources :tasks do
     collection do
