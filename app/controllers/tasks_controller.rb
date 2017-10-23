@@ -9,6 +9,7 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
+    @projects = Project.all
   end
 
   def create
@@ -22,6 +23,7 @@ class TasksController < ApplicationController
 
   def edit
     @task = Task.find(params[:id])
+    @projects = Project.all
   end
 
   def update
