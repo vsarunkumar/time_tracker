@@ -12,6 +12,7 @@ gem 'puma', '~> 3.0'
 gem 'rails', '~> 5.0.6'
 gem 'sass-rails'
 gem 'turbolinks'
+gem 'uglifier'
 
 gem 'pry-rails', group: %i[development test]
 gem 'rubocop', require: false
